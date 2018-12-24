@@ -1,0 +1,27 @@
+<form>
+  <hr style="margin-top: 3%" />
+  <h3>Telefone form</h3>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Modelo</label>
+    <input type="text" [(ngModel)]="tel.modelo" name="Modelo" class="form-control" id="modelo-id" 
+    aria-describedby="name" placeholder="Enter modelo">
+    <small id="emailHelp" class="form-text text-muted">Enter with your phone model.</small>
+
+    <label for="exampleInputMarca1">Marca</label>
+    <input type="text" [(ngModel)]="tel.marca" name="Marca" class="form-control" id="marca-id" 
+    aria-describedby="Marca" placeholder="Enter brand">
+    <small id="marcaHelp" class="form-text text-muted">Enter with your phone brand.</small>
+
+    <label for="exampleInputOperadora1">Modelo</label>
+    <input type="text" [(ngModel)]="tel.operadora" name="Operadora" class="form-control" id="operadora-id" 
+    aria-describedby="Operadora" placeholder="Enter mobile operator">
+    <small id="operadoraHelp" class="form-text text-muted">Enter with your mobile operator.</small>
+
+    <label for="exampleInputNumero1">Número</label>
+    <input type="text" [(ngModel)]="tel.numero" name="Numero" class="form-control" id="numero-id" 
+    aria-describedby="name" placeholder="Enter numero">
+    <small id="numeroHelp" class="form-text text-muted">Enter with your phone number.</small>
+  </div>
+
+  <button type="submit" (click)="salvar(tel)"  class="btn btn-primary">Save</button>
+</form>

@@ -1,0 +1,7 @@
+<div>
+  <h3>Telefones</h3>
+  <a routerLink="/telefone-form">Novo Telefone</a>
+  <ul *ngFor="let tel of telefones" class="list-group">
+    <li class="list-group-item" style="margin-top: 5px;"> {{tel.id}} | {{tel.modelo}} | {{tel.marca}} | {{tel.operadora}} | {{tel.numero}}  </li>
+  </ul>
+</div>

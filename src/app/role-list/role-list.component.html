@@ -1,0 +1,7 @@
+<div>
+    <h3>Roles</h3>
+    <a routerLink="/role-form">New Role</a>
+    <ul *ngFor="let role of roles" class="list-group">
+      <li class="list-group-item" style="margin-top: 5px;"> {{role.id}} | {{role.name}} </li>
+    </ul>
+</div>
