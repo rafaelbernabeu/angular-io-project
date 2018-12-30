@@ -1,5 +1,5 @@
 import { Router } from '@angular/router';
-import { TelefoneService } from './../../telefone.service';
+import { TelefoneService } from '../telefone.service';
 import { Telefone } from './../../domains/permissions/entities/Telefone';
 import { Component, OnInit } from '@angular/core';
 

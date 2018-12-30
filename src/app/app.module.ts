@@ -14,7 +14,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { RoleListComponent } from './role/role-list/role-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RoleFormComponent } from './role/role-form/role-form.component';
-import { UserService } from './user.service';
+import { UserService } from './user/user.service';
 import { TelefoneListComponent } from './telefone/telefone-list/telefone-list.component';
 import { TelefoneFormComponent } from './telefone/telefone-form/telefone-form.component';
 import { UserModule } from './user/user.module';

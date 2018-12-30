@@ -6,7 +6,7 @@ import { UserRoutingModule } from './user-routing.module';
 import { UserFormComponent } from './user-form/user-form.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { UserComponent } from './user.component';
-import { UserService } from '../user.service';
+import { UserService } from './user.service';
 
 @NgModule({
   declarations: [

@@ -1,7 +1,7 @@
-import { httpOptions } from './role.service';
+import { httpOptions } from '../role.service';
 import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
-import { User } from './domains/permissions/entities/User';
+import { User } from '../domains/permissions/entities/User';
 import { HttpHeaders, HttpClient } from '@angular/common/http';
 import { catchError, map, tap } from 'rxjs/operators';
 
