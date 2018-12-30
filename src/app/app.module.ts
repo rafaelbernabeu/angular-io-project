@@ -15,6 +15,7 @@ import { RoleListComponent } from './role/role-list/role-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RoleFormComponent } from './role/role-form/role-form.component';
 import { LoginComponent } from './login/login.component';
+import { AuthService } from './login/auth.service';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,7 @@ import { LoginComponent } from './login/login.component';
     //   InMemoryDataService, { dataEncapsulation: false }
     // )
   ],
-  providers: [RoleService],
+  providers: [RoleService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

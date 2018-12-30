@@ -3,13 +3,10 @@ import { Injectable, EventEmitter } from '@angular/core';
 
 import { Usuario } from './usuario';
 
-
 @Injectable()
 export class AuthService {
 
   private usuarioAutenticado = false;
-
-  mostrarMenuEmitter = new EventEmitter<boolean>();
 
   constructor(private router: Router) { }
 
@@ -19,15 +16,11 @@ export class AuthService {
       usuario.senha === '123456') {
 
       this.usuarioAutenticado = true;
-
-      this.mostrarMenuEmitter.emit(true);
-
-      this.router.navigate(['/']);
-
+      this.router.navigate(['/user']);
     } else {
       this.usuarioAutenticado = false;
-
-      this.mostrarMenuEmitter.emit(false);
+      usuario.nome = '';
+      usuario.senha = '';
     }
   }
 
