@@ -1,6 +1,6 @@
 import { Router } from '@angular/router';
-import { TelefoneService } from './../telefone.service';
-import { Telefone } from './../domains/permissions/entities/Telefone';
+import { TelefoneService } from './../../telefone.service';
+import { Telefone } from './../../domains/permissions/entities/Telefone';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -16,10 +16,9 @@ export class TelefoneFormComponent implements OnInit {
     this._service.addTelefone(tel).subscribe(
       role => this._router.navigate(['/telefone'])
     );
-    
   }
 
-  constructor(private _service:TelefoneService, private _router: Router) { }
+  constructor(private _service: TelefoneService, private _router: Router) { }
 
   ngOnInit() {
   }

@@ -1,8 +1,8 @@
-import { RoleService } from './../role.service';
+import { RoleService } from './../../role.service';
 import { Component, OnInit } from '@angular/core';
 
 // My imports
-import { Role } from '../domains/permissions/entities/Role';
+import { Role } from '../../domains/permissions/entities/Role';
 
 @Component({
   selector: 'app-role-list',
@@ -11,12 +11,12 @@ import { Role } from '../domains/permissions/entities/Role';
 })
 export class RoleListComponent implements OnInit {
 
-  roles: Array<Role> = []
+  roles: Array<Role> = [];
 
-  public getRoles(){
+  public getRoles() {
     this._service.getRoles().subscribe(
       roles => this.roles = roles
-    )
+    );
   }
 
   constructor(

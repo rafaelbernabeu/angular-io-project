@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { RoleService } from '../role.service';
+import { RoleService } from '../../role.service';
 
 // My imports
-import { Role } from './../domains/permissions/entities/Role';
-import { Router } from "@angular/router";
+import { Role } from './../../domains/permissions/entities/Role';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-role-form',
@@ -16,12 +16,11 @@ export class RoleFormComponent implements OnInit {
 
   public salvar(role: Role) {
     this._service.addRole(role).subscribe(
-      role => this._router.navigate(['/role'])
+      event => this._router.navigate(['/role'])
     );
-    
   }
 
-  constructor(private _service:RoleService, private _router: Router) { }
+  constructor(private _service: RoleService, private _router: Router) { }
 
   ngOnInit() {
   }

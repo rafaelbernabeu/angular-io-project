@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { TelefoneService } from '../telefone.service';
-import { Telefone } from '../domains/permissions/entities/Telefone';
+import { TelefoneService } from '../../telefone.service';
+import { Telefone } from '../../domains/permissions/entities/Telefone';
 
 @Component({
   selector: 'app-telefone-list',
@@ -9,12 +9,12 @@ import { Telefone } from '../domains/permissions/entities/Telefone';
 })
 export class TelefoneListComponent implements OnInit {
 
-  telefones: Array<Telefone> = []
+  telefones: Array<Telefone> = [];
 
-  public getTelefones(){
+  public getTelefones() {
     this._service.getTelefones().subscribe(
       tels => this.telefones = tels
-    )
+    );
   }
 
   constructor(

@@ -1,8 +1,8 @@
-import { UserService } from './../user.service';
+import { UserService } from './../../user.service';
 import { Component, OnInit } from '@angular/core';
 
 // My import
-import { User } from '../domains/permissions/entities/User';
+import { User } from '../../domains/permissions/entities/User';
 
 @Component({
   selector: 'app-user-list',
@@ -11,12 +11,12 @@ import { User } from '../domains/permissions/entities/User';
 })
 export class UserListComponent implements OnInit {
 
-  users: Array<User> = []
+  users: Array<User> = [];
 
-  public getRoles(){
+  public getRoles() {
     this._service.getUsers().subscribe(
       roles => this.users = roles
-    )
+    );
   }
 
   constructor(

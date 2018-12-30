@@ -1,6 +1,6 @@
-import { UserService } from './../user.service';
+import { UserService } from './../../user.service';
 import { Router } from '@angular/router';
-import { User } from './../domains/permissions/entities/User';
+import { User } from './../../domains/permissions/entities/User';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -16,10 +16,9 @@ export class UserFormComponent implements OnInit {
     this._service.addUser(user).subscribe(
       role => this._router.navigate(['/user'])
     );
-    
   }
 
-  constructor(private _service:UserService, private _router: Router) { }
+  constructor(private _service: UserService, private _router: Router) { }
 
   ngOnInit() {
   }

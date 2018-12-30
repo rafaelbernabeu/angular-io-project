@@ -1,8 +1,7 @@
 import { TelefoneComponent } from './telefone/telefone.component';
-import { InMemoryDataService } from './in-memory-data.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule }    from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 // External imports
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
@@ -13,15 +12,14 @@ import { AppComponent } from './app.component';
 import { RoleComponent } from './role/role.component';
 import { UserComponent } from './user/user.component';
 import { AppRoutingModule } from './app-routing.module';
-import { RoleListComponent } from './role-list/role-list.component';
-import { UserListComponent } from './user-list/user-list.component';
+import { RoleListComponent } from './role/role-list/role-list.component';
+import { UserListComponent } from './user/user-list/user-list.component';
 import { HttpClientModule } from '@angular/common/http';
-import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { RoleFormComponent } from './role-form/role-form.component';
-import { UserFormComponent } from './user-form/user-form.component';
+import { RoleFormComponent } from './role/role-form/role-form.component';
+import { UserFormComponent } from './user/user-form/user-form.component';
 import { UserService } from './user.service';
-import { TelefoneListComponent } from './telefone-list/telefone-list.component';
-import { TelefoneFormComponent } from './telefone-form/telefone-form.component';
+import { TelefoneListComponent } from './telefone/telefone-list/telefone-list.component';
+import { TelefoneFormComponent } from './telefone/telefone-form/telefone-form.component';
 
 @NgModule({
   declarations: [

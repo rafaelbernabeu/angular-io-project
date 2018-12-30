@@ -1,6 +1,6 @@
-import { TelefoneFormComponent } from './telefone-form/telefone-form.component';
+import { TelefoneFormComponent } from './telefone/telefone-form/telefone-form.component';
 import { TelefoneComponent } from './telefone/telefone.component';
-import { UserFormComponent } from './user-form/user-form.component';
+import { UserFormComponent } from './user/user-form/user-form.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
@@ -8,7 +8,7 @@ import { CommonModule } from '@angular/common';
 // My imports
 import { UserComponent } from './user/user.component';
 import { RoleComponent } from './role/role.component';
-import { RoleFormComponent } from './role-form/role-form.component';
+import { RoleFormComponent } from './role/role-form/role-form.component';
 
 const routes: Routes = [
   { path: 'user', component: UserComponent },
