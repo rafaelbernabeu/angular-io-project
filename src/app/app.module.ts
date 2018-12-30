@@ -14,20 +14,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { RoleListComponent } from './role/role-list/role-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RoleFormComponent } from './role/role-form/role-form.component';
-import { UserService } from './user/user.service';
-import { TelefoneListComponent } from './telefone/telefone-list/telefone-list.component';
-import { TelefoneFormComponent } from './telefone/telefone-form/telefone-form.component';
-import { UserModule } from './user/user.module';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RoleComponent,
-    TelefoneComponent,
     RoleListComponent,
     RoleFormComponent,
-    TelefoneListComponent,
-    TelefoneFormComponent
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +37,7 @@ import { UserModule } from './user/user.module';
     //   InMemoryDataService, { dataEncapsulation: false }
     // )
   ],
-  providers: [RoleService, UserService],
+  providers: [RoleService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

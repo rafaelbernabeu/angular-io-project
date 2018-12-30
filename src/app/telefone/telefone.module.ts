@@ -28,4 +28,4 @@ import { TelefoneService } from './telefone.service';
     TelefoneService
   ]
 })
-export class UserModule { }
+export class TelefoneModule { }

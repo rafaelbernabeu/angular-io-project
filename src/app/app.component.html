@@ -1,18 +1,28 @@
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+  <!-- Brand -->
+  <a routerLink="/" class="navbar-brand" href="#">{{title}}</a>
+
+  <!-- Toggler/collapsibe Button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Navbar links -->
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/user">User</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/role">Role</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/telefone">Telefone</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
 <div class="container">
-
-  <h1>{{title}}</h1>
-
-  <ul class="nav flex-column">
-    <li class="nav-item">
-      <a routerLink="/user">User</a>
-    </li>
-    <li class="nav-item">
-      <a routerLink="/role">Role</a>
-    </li>
-    <li class="nav-item">
-      <a routerLink="/telefone">Telefone</a>
-    </li>
-  </ul>
-
   <router-outlet></router-outlet>
 </div>

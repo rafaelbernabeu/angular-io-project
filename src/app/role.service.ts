@@ -20,7 +20,7 @@ export class RoleService {
     return this.http.get<Role[]>(this.rolesUrl)
       .pipe(
         tap(heroes => console.log(heroes)),
-        //catchError()
+        // catchError()
       );
   }
 
