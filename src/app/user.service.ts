@@ -16,7 +16,7 @@ export class UserService {
     return this.http.get<User[]>(this.usersUrl)
       .pipe(
         tap(heroes => console.log('User save...')),
-        //catchError()
+        // catchError()
       );
   }
 
