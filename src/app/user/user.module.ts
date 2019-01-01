@@ -7,6 +7,7 @@ import { UserFormComponent } from './user-form/user-form.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { UserComponent } from './user.component';
 import { UserService } from './user.service';
+import { AuthService } from '../login/auth.service';
 
 @NgModule({
   declarations: [

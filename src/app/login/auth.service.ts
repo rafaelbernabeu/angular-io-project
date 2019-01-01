@@ -19,24 +19,25 @@ export class AuthService {
     private http: HttpClient
   ) { }
 
-  criaUrlLogin(usuario: Usuario) {
+  private criaUrlLogin(usuario: Usuario) {
     return `oauth/token?grant_type=password&username=${usuario.nome}&password=${usuario.senha}`;
+  }
+
+  private getAuthHeaders() {
+    return {
+      headers: new HttpHeaders({ 'Authorization': 'Basic Y2xpZW50OjEyMw==' })
+    };
   }
 
   async fazerLogin(usuario: Usuario) {
     this.token = null;
     this.usuarioAutenticado = false;
 
-    const httpOptions = {
-      headers: new HttpHeaders({
-        'Authorization': 'Basic Y2xpZW50OjEyMw=='
-      })
-    };
-
-    this.token = await this.http.post(this.criaUrlLogin(usuario), null, httpOptions).toPromise() as Token;
+    this.token = await this.http.post(this.criaUrlLogin(usuario), null, this.getAuthHeaders()).toPromise() as Token;
 
     if (this.token != null) {
 
+      console.log(this.token);
       this.usuarioAutenticado = true;
       this.router.navigate(['/user']);
 
@@ -49,8 +50,18 @@ export class AuthService {
     }
   }
 
-  usuarioEstaAutenticado() {
+  public usuarioEstaAutenticado(): boolean {
     return this.usuarioAutenticado;
+  }
+
+  public getAccessToken(): String {
+    return this.token == null ? null : this.token.access_token;
+  }
+
+  public getHeaders() {
+    return {
+      headers: new HttpHeaders({ 'Authorization': 'Bearer ' + this.getAccessToken() })
+    };
   }
 
 }
